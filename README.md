@@ -24,6 +24,7 @@ Il servizio web gestisce menu QR e comande; l'applicativo installato nel locale 
 - [Catalogo, menu e allergeni](docs/06-catalogo-menu-allergeni.md)
 - [Roadmap per il pilota](docs/07-roadmap-pilota.md)
 - [Fondazione tecnica e modello dati](docs/08-fondazione-tecnica-e-modello-dati.md)
+- [Regole per i contributor](CONTRIBUTING.md)
 
 ## Principi
 
