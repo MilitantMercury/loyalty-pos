@@ -1,21 +1,11 @@
-# Security Policy
+# Politica di sicurezza
 
-## Supported Versions
+## Versioni supportate
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+Il progetto è nella fase di definizione del prodotto e non esistono ancora versioni rilasciate o installabili. La politica verrà aggiornata al primo rilascio.
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+## Segnalare una vulnerabilità
 
-## Reporting a Vulnerability
+Non pubblicare dettagli di vulnerabilità in una issue, una pull request o una discussione pubblica. Usa una segnalazione privata di sicurezza su GitHub, quando disponibile, oppure contatta privatamente il proprietario del repository tramite GitHub.
 
-Use this section to tell people how to report a vulnerability.
-
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+Una segnalazione utile include una descrizione del problema, i passaggi per riprodurlo, l'impatto potenziale e qualsiasi possibile mitigazione nota.

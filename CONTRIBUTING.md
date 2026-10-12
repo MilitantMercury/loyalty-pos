@@ -18,7 +18,7 @@
 Usa un prefisso e parole separate da trattini:
 
 - `feat/identificazione-cliente`
-- `fix/duplicazione-punti`
+- `fix/duplicazione-comanda`
 - `docs/archivio-documenti`
 - `chore/configurazione-ci`
 
@@ -29,7 +29,7 @@ Se esiste un'issue, aggiungi il suo numero dopo il prefisso: `feat/12-identifica
 Usa messaggi brevi, in minuscolo, con un prefisso coerente:
 
 - `feat: aggiunge l'archivio documenti`
-- `fix: evita l'accredito duplicato dei punti`
+- `fix: evita l'invio duplicato della comanda`
 - `docs: definisce il flusso di chiusura`
 - `chore: configura i controlli automatici`
 

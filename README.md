@@ -19,11 +19,12 @@ Il cliente compone la comanda dal QR del tavolo; la cassa la riceve, la gestisce
 - [Integrazioni fiscali e hardware](docs/03-integrazioni-hardware.md)
 - [Decisioni e questioni aperte](docs/04-decisioni-aperte.md)
 - [Flusso di collaborazione](docs/05-flusso-collaborazione.md)
+- [Catalogo, menu e allergeni](docs/06-catalogo-menu-allergeni.md)
 
 ## Principi
 
 1. La velocità della cassiera viene prima di tutto.
-2. I punti si accreditano solo dopo la conferma della stampa fiscale.
+2. Una comanda diventa pagata solo dopo la conferma della stampa fiscale.
 3. Il locale conserva la propria stampante fiscale: nessun cambio hardware richiesto.
 4. Si parte dai bar e dai flussi essenziali; niente gestionale generalista nella prima versione.
 
