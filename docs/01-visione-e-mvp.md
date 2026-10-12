@@ -49,6 +49,8 @@ Una cassa software per bar e piccoli locali. Il cliente usa il QR del tavolo per
 
 Il menu QR e la cassa leggono lo stesso catalogo: un prezzo o un prodotto non può essere aggiornato separatamente nei due canali.
 
+Il catalogo viene gestito nell'applicativo installato e pubblicato al servizio web. Il QR apre una pagina web pubblica in sola lettura: mostra categorie, prodotti, prezzi, disponibilità e allergeni e consente soltanto di comporre e inviare la comanda del tavolo. Non richiede registrazione e non mostra stato della comanda, pagamenti o storico al cliente.
+
 Per il primo MVP, ogni prodotto deve avere almeno:
 
 - nome;

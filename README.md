@@ -22,6 +22,7 @@ Il servizio web gestisce menu QR e comande; l'applicativo installato nel locale 
 - [Decisioni e questioni aperte](docs/04-decisioni-aperte.md)
 - [Flusso di collaborazione](docs/05-flusso-collaborazione.md)
 - [Catalogo, menu e allergeni](docs/06-catalogo-menu-allergeni.md)
+- [Fondazione tecnica e modello dati](docs/08-fondazione-tecnica-e-modello-dati.md)
 
 ## Principi
 

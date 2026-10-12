@@ -4,6 +4,8 @@
 
 Il catalogo è usato sia dalla cassa sia dal menu QR. Un prodotto, un prezzo o un allergene si modifica una sola volta e il cambiamento deve essere visibile in entrambi i canali.
 
+Nell'MVP il catalogo viene gestito nell'applicativo installato del locale e pubblicato al servizio web. La pagina QR pubblica lo legge in sola lettura: non è un secondo pannello di gestione.
+
 ## Categorie
 
 Ogni categoria ha almeno nome e ordine di visualizzazione. Le categorie servono a rendere rapido il menu del cliente e la selezione dei prodotti in cassa.

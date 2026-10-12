@@ -27,9 +27,9 @@ RCH è una famiglia di prodotti, non un unico protocollo da assumere compatibile
 ## Architettura desiderata
 
 ```text
-QR menu → servizio web comande ↔ applicativo cassa locale
+QR menu ← servizio web comande ↔ applicativo cassa locale
                                   |             |
-                         menu e stati      motore vendite
+                         menu e stati      catalogo e motore vendite
                                                 |         |
                                         Adapter POS  Adapter fiscale
                                                 |     |------------------|
@@ -38,7 +38,7 @@ QR menu → servizio web comande ↔ applicativo cassa locale
                                                   Stampante/RT   Stampante/RT
 ```
 
-Il servizio web conserva comande e stati sintetici; l'applicativo locale conserva i dati operativi, fiscali e POS. L'adapter POS deve almeno inviare l'importo da incassare, attendere l'esito e restituire un riferimento della transazione quando disponibile. L'adapter fiscale deve esporre almeno: verifica disponibilità, emissione vendita, lettura esito, annullamento, richiesta di chiusura Z, lettura dei riferimenti della chiusura e diagnostica. L'applicazione non deve contenere logica dipendente da una singola marca o da uno specifico POS.
+L'applicativo locale gestisce il catalogo e lo pubblica al servizio; il servizio espone il menu QR e conserva comande e stati sintetici. L'applicativo locale conserva i dati operativi e fiscali. Gli esiti tecnici del POS sono invece registrati solo in un journal append-only locale su file, senza dati carta. L'adapter POS deve almeno inviare l'importo da incassare, attendere l'esito e restituire un riferimento della transazione quando disponibile. L'adapter fiscale deve esporre almeno: verifica disponibilità, emissione vendita, lettura esito, annullamento, richiesta di chiusura Z, lettura dei riferimenti della chiusura e diagnostica. L'applicazione non deve contenere logica dipendente da una singola marca o da uno specifico POS.
 
 L'esito di una vendita fiscalizzata deve includere, ove restituiti dal dispositivo: numero documento, importo, data/ora, matricola della stampante e numero Z. Questi dati collegano l'archivio operativo alla fonte fiscale.
 

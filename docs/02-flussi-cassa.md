@@ -20,12 +20,14 @@ Il servizio conserva le comande e riceve i cambi di stato, ma il cliente non ved
 ## Stati della comanda
 
 ```text
-Da gestire → Consegnata → In pagamento → Pagata → Documenti emessi
-                                  ↓
-                            Da verificare
+Da gestire → Consegnata → Pagata → Documenti emessi
+                  ↓
+            Da verificare
 ```
 
 `Da gestire` e `Consegnata` sono comande attive. `Pagata` non rimane nella lista di lavoro: è visibile soltanto nell'archivio `Documenti emessi`.
+
+La consegna tecnica alla cassa e il pagamento in corso sono gestiti localmente dall'applicativo: non sono stati di business della comanda.
 
 Se l'applicativo è offline, il servizio mantiene le nuove comande in attesa di consegna. Quando la cassa torna connessa, anche tramite hotspot temporaneo, le riceve e le salva localmente.
 
@@ -37,7 +39,7 @@ La cassa deve guidare la divisione, senza richiedere calcoli manuali alla cassie
 
 Se la stampante risponde con un errore certo prima dell'emissione:
 
-1. La comanda o la quota rimane in stato `In pagamento`.
+1. La vendita locale resta aperta o da completare; la comanda resta `Consegnata`.
 2. La cassiera vede un messaggio immediato e semplice: `Scontrino non emesso. Riprova.`
 
 Se la risposta si interrompe e non è possibile sapere se il documento sia stato emesso:
@@ -61,7 +63,7 @@ L'archivio operativo, chiamato `Documenti emessi`, mostra soltanto le vendite pe
 
 La ricerca iniziale deve supportare numero documento, data, importo e tavolo. Dal dettaglio deve essere possibile ristampare una copia cortesia e avviare l'annullo quando consentito.
 
-Le comande `Da gestire`, `Consegnata`, `In pagamento` e `Da verificare` non sono documenti emessi: restano nella gestione comande o in una sezione separata per le verifiche.
+Le comande `Da gestire`, `Consegnata` e `Da verificare` non sono documenti emessi: restano nella gestione comande o in una sezione separata per le verifiche.
 
 ## Chiusura giornaliera
 
