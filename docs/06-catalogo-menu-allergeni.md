@@ -32,4 +32,4 @@ Il primo MVP deve permettere al titolare di selezionare per ogni prodotto gli al
 
 ## Aggiornamenti
 
-Un aggiornamento di prezzo, disponibilità o allergeni si applica alle nuove comande. Le comande già inviate e i documenti emessi conservano i dati e il prezzo con cui sono stati creati.
+Un aggiornamento di prezzo, disponibilità o allergeni si applica alle nuove comande. Il servizio salva nella comanda inviata una fotografia dei prodotti, dei prezzi e degli allergeni; le comande già inviate e i documenti emessi conservano quindi i dati con cui sono stati creati.
