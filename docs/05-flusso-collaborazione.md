@@ -24,6 +24,7 @@ Squash merge su main
 - Una branch tratta un solo obiettivo e resta aperta il meno possibile.
 - Ogni PR richiede almeno una revisione da qualcuno che non ne sia autore.
 - Il merge è squash: la cronologia di `main` contiene un commit chiaro per ogni cambiamento concluso.
+- Ogni modifica richiede l'aggiornamento della documentazione pertinente nella stessa PR. La regola vale senza eccezioni anche per fondatori, maintainer e contributori che usano Codex.
 - Le decisioni con impatto sul prodotto o sull'architettura vengono annotate in `docs/decisions/`.
 - Quando sarà scelto lo stack, lint, formattazione e test dovranno superare in automatico prima del merge.
 
@@ -46,5 +47,5 @@ Nelle impostazioni GitHub del repository, `main` deve richiedere una pull reques
 
 ## Eccezioni
 
-Un intervento urgente può essere fatto con una branch `fix/` e una PR piccola; non elimina la revisione, la documentazione del motivo e il controllo successivo.
+Un intervento urgente può essere fatto con una branch `fix/` e una PR piccola; non elimina la revisione, l'aggiornamento della documentazione pertinente e il controllo successivo.
 
