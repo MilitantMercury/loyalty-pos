@@ -2,43 +2,48 @@
 
 ## Problema
 
-I piccoli esercenti vogliono fidelizzare i clienti, ma i programmi loyalty tradizionali richiedono tempo alla cassa o chiedono al cliente di installare e usare strumenti poco immediati. Nei momenti affollati ogni passaggio extra diventa un problema.
+Nei bar con servizio al tavolo, raccogliere una comanda e riscuotere il conto può creare attese e passaggi manuali. Nei momenti affollati, ogni attività extra alla cassa diventa un problema.
 
 ## Proposta
 
-Una cassa software pensata per bar e piccoli locali, con loyalty integrata. La vendita viene gestita normalmente; la loyalty usa il valore reale dell'ordine e non richiede alla cassiera di inserire soglie, punti o importi manualmente.
+Una cassa software per bar e piccoli locali. Il cliente usa il QR del tavolo per creare la comanda; la cassa la riceve in tempo reale, la gestisce e la chiude al pagamento con documento fiscale e POS.
 
 ## Utenti iniziali
 
-- Cassiera: deve chiudere la vendita con il minor numero possibile di tocchi.
-- Titolare: configura prodotti, regole loyalty e consulta risultati essenziali.
-- Cliente: si identifica rapidamente e vede il proprio progresso verso un premio.
+- Cliente al tavolo: apre il menu dal QR e invia la comanda senza attendere il personale.
+- Personale di sala: porta la comanda al tavolo e la marca come consegnata.
+- Cassiera: vede le comande in arrivo e chiude il pagamento con il minor numero possibile di tocchi.
+- Titolare: configura tavoli e catalogo e consulta i documenti emessi.
 
 ## Perimetro della prima versione
 
+- Tavoli numerati e un QR menu collegato a ciascun tavolo.
 - Catalogo essenziale di prodotti e prezzi.
-- Creazione dell'ordine e calcolo del totale.
-- Scelta del metodo di pagamento come informazione di vendita.
-- Identificazione opzionale del cliente per la loyalty.
-- Invio dell'ordine alla stampante fiscale compatibile.
-- Accredito automatico dei punti dopo esito fiscale positivo.
-- Annullamento di una vendita appena emessa, con documento di annullamento fiscale e revoca dei punti.
-- Archivio consultabile delle vendite e dei documenti emessi.
+- Creazione autonoma della comanda dal QR e invio in tempo reale alla cassa.
+- Lista `Da gestire` in cassa per le nuove comande.
+- Stato `Consegnata` per le comande portate al tavolo e ancora da pagare.
+- Avvio del pagamento dalla cassa, con scelta guidata fra conto unico e conto separato.
+- Invio del totale da incassare al POS e registrazione del relativo esito.
+- Invio della vendita alla stampante fiscale compatibile.
+- Passaggio della comanda a `Pagata` solo dopo l'esito fiscale positivo.
+- Archivio consultabile dei documenti emessi.
+- Annullamento di un documento appena emesso, con documento fiscale di annullamento.
 - Chiusura giornaliera richiesta alla stampante fiscale, con storico delle chiusure.
 
 ## Fuori dal perimetro iniziale
 
 - Resi.
 - Magazzino.
-- Tavoli e comande complesse.
+- Prenotazioni, gestione tavoli complessa, spostamento o unione tavoli.
 - Delivery e marketplace.
 - Fatturazione e gestione contabile completa.
-- Pagamenti gestiti direttamente dalla piattaforma.
+- Loyalty, premi e identificazione cliente.
+- Pagamenti gestiti direttamente dalla piattaforma: nella prima versione integriamo il flusso con il POS esistente.
 - Compatibilità universale con ogni modello di stampante fiscale.
 
 ## Misura del successo
 
-Una vendita loyalty deve richiedere alla cassiera lo stesso tempo, o quasi, di una vendita senza loyalty. L'accredito dei punti non può avvenire prima della conferma della stampa fiscale.
+Una nuova comanda deve apparire in cassa senza un'azione della cassiera. Il pagamento di un conto unico deve poter essere chiuso con pochi tocchi. Una comanda non può risultare `Pagata` prima della conferma della stampa fiscale.
 
 La fonte fiscale resta sempre la stampante/RT. La nostra applicazione conserva i riferimenti ricevuti dal dispositivo e offre un archivio operativo, senza sostituirsi all'archivio fiscale del registratore.
 

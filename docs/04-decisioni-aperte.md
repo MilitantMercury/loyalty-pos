@@ -6,11 +6,15 @@
 | --- | --- |
 | Pubblico iniziale | Bar e piccoli esercenti |
 | Priorità | Praticità, velocità, semplicità |
-| Modello loyalty | Punti basati sull'importo reale della vendita |
-| Momento accredito | Solo dopo conferma della stampa fiscale |
+| Flusso iniziale | Comanda dal QR del tavolo, gestione e pagamento alla cassa |
+| Tavoli | Numerati; ogni tavolo espone il proprio QR menu |
+| Stati comanda | `Da gestire` → `Consegnata` → `In pagamento` → `Pagata` |
+| Pagamento | Avviato dalla cassiera; conto unico o separato guidato |
+| POS | La cassa invia l'importo da incassare e riceve l'esito del pagamento |
+| Loyalty | Fuori dal primo MVP; tornerà dopo la validazione del flusso di cassa |
 | Hardware | Usare la stampante fiscale esistente del locale |
 | Prime famiglie | Epson FP-81II RT e RCH |
-| Annulli | Inclusi, con documento fiscale di annullamento e revoca punti |
+| Annulli | Inclusi, con documento fiscale di annullamento |
 | Resi | Fuori dalla prima versione |
 | Archivio documenti | Incluso; archivio operativo collegato ai riferimenti della stampante |
 | Chiusura giornaliera | Inclusa; la stampante esegue la Z, la cassa ne conserva l'esito |
@@ -18,18 +22,21 @@
 
 ## Da decidere
 
-1. Come identifica il cliente: QR personale, numero di telefono, NFC o più metodi?
-2. Qual è la regola punti iniziale: punti per euro, soglie o timbri misti?
-3. Quali premi si possono riscattare e con quale procedura?
-4. Quale modello RCH preciso supportare per primo?
-5. Quale ambiente usare in cassa: tablet Android, tablet iPad, PC Windows o web app locale?
-6. Come gestire la vendita se Internet non è disponibile?
-7. Come ottenere dispositivi reali, documentazione e supporto tecnico per i test?
+1. Il cliente può modificare o annullare una comanda inviata dal QR? Fino a quando?
+2. Come il personale marca `Consegnata`: dalla cassa, da un telefono o da entrambi?
+3. Come si divide il conto separato: per persona, per prodotti o per importo libero?
+4. Quale POS preciso integrare per primo e con quale protocollo di scambio importo/esito?
+5. Quale modello RCH preciso supportare per primo?
+6. Quale ambiente usare in cassa: tablet Android, tablet iPad, PC Windows o web app locale?
+7. Come gestire comande e pagamenti se Internet non è disponibile?
+8. Come ottenere dispositivi reali, documentazione e supporto tecnico per i test?
 
 ## Rischi da validare presto
 
 - Differenze nei protocolli e nei firmware delle stampanti fiscali installate.
 - Affidabilità della connessione locale con il dispositivo fiscale.
-- Tempi reali del flusso con coda al banco.
+- Affidabilità della consegna in tempo reale di una comanda dal QR alla cassa.
+- Tempi reali del flusso con coda al banco e pagamento separato.
 - Gestione delle vendite duplicate in caso di errore o riconnessione.
+- Disallineamento tra esito POS e documento fiscale in caso di errore o interruzione.
 - Adozione: il locale deve percepire un beneficio immediato senza sostituire il proprio hardware.

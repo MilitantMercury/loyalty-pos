@@ -1,8 +1,8 @@
 # Loyalty
 
-Una cassa software per bar e piccoli esercenti con loyalty integrata e automatica.
+Una cassa software per bar e piccoli esercenti, pensata per ordini al tavolo via QR e pagamenti rapidi al banco.
 
-L'obiettivo è semplice: rendere il ritorno dei clienti più frequente senza rallentare la cassa, senza cambiare la stampante fiscale esistente e senza affidare alla cassiera attività aggiuntive.
+L'obiettivo è semplice: far arrivare alla cassa le comande create dal cliente, consegnarle al tavolo e chiuderle con un pagamento e uno scontrino, senza cambiare la stampante fiscale esistente e senza rallentare la cassiera.
 
 ## Stato
 
@@ -10,7 +10,7 @@ Siamo nella fase di definizione del prodotto. Non è ancora stato scelto lo stac
 
 ## MVP in una frase
 
-La cassiera batte normalmente l'ordine nella nostra cassa; dopo che la stampante fiscale conferma l'emissione del documento commerciale, il sistema accredita in automatico i punti al cliente identificato.
+Il cliente compone la comanda dal QR del tavolo; la cassa la riceve, la gestisce e, al pagamento, invia l'importo alla stampante fiscale e al POS. Solo dopo la conferma del documento fiscale la comanda risulta pagata e passa nello storico.
 
 ## Documentazione
 
