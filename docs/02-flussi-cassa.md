@@ -4,13 +4,18 @@
 
 1. Il cliente entra e si siede a un tavolo numerato.
 2. Scansiona il QR associato al tavolo, apre il menu e crea la comanda.
-3. La piattaforma riceve la comanda e la invia in tempo reale alla cassa.
-4. La cassa mostra la nuova comanda nella lista `Da gestire`.
-5. Il personale porta la comanda al tavolo e la marca `Consegnata`. La comanda non è ancora pagata.
-6. Quando il cliente arriva in cassa, la cassiera apre la comanda e preme `Pagamento`.
-7. La cassa guida la scelta fra conto unico e conto separato.
-8. Per ogni quota da incassare, la cassa invia l'importo al POS e attende il suo esito; quindi invia i dati alla stampante fiscale.
-9. Dopo la conferma del documento fiscale, la quota o la comanda risulta `Pagata`, scompare dalle comande attive e appare in `Documenti emessi`.
+3. Prima dell'invio, il menu chiede una conferma esplicita: `Sei sicuro di inviare la comanda?`.
+4. Il servizio salva una fotografia di tavolo, prodotti, prezzi e allergeni; il carrello si svuota e il cliente vede solo `Comanda inviata`.
+5. Il servizio invia la comanda in tempo reale alla cassa.
+6. L'applicativo la salva localmente e conferma la ricezione al servizio.
+7. La cassa mostra la nuova comanda nella lista `Da gestire`.
+8. Il personale porta la comanda al tavolo e la marca `Consegnata`. La comanda non è ancora pagata.
+9. Quando il cliente arriva in cassa, la cassiera apre una o più comande aperte dello stesso tavolo e preme `Pagamento`.
+10. La cassa guida la scelta fra conto unico e conto separato.
+11. Per ogni quota da incassare, la cassa invia l'importo al POS e attende il suo esito; quindi invia i dati alla stampante fiscale.
+12. Dopo la conferma del documento fiscale, ogni comanda inclusa risulta `Pagata`, scompare dalle comande attive e appare in `Documenti emessi`.
+
+Il servizio conserva le comande e riceve i cambi di stato, ma il cliente non vede consegna, pagamento o documento: dopo l'invio riceve solo la conferma della comanda.
 
 ## Stati della comanda
 
@@ -22,9 +27,11 @@ Da gestire → Consegnata → In pagamento → Pagata → Documenti emessi
 
 `Da gestire` e `Consegnata` sono comande attive. `Pagata` non rimane nella lista di lavoro: è visibile soltanto nell'archivio `Documenti emessi`.
 
+Se l'applicativo è offline, il servizio mantiene le nuove comande in attesa di consegna. Quando la cassa torna connessa, anche tramite hotspot temporaneo, le riceve e le salva localmente.
+
 ## Pagamento separato
 
-La cassa deve guidare la divisione, senza richiedere calcoli manuali alla cassiera. La somma delle quote deve coincidere con il totale della comanda prima dell'emissione dei documenti fiscali. Il dettaglio esatto della divisione (per persona, per prodotti o per importo) resta da definire.
+La cassa deve guidare la divisione, senza richiedere calcoli manuali alla cassiera. Può includere più comande aperte dello stesso tavolo in un unico documento di vendita. La somma delle quote deve coincidere con il totale delle comande selezionate prima dell'emissione dei documenti fiscali. Il dettaglio esatto della divisione (per persona, per prodotti o per importo) resta da definire.
 
 ## Errore di stampa o comunicazione
 

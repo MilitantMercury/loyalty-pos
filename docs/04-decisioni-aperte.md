@@ -8,10 +8,16 @@
 | Priorità | Praticità, velocità, semplicità |
 | Flusso iniziale | Comanda dal QR del tavolo, gestione e pagamento alla cassa |
 | Tavoli | Numerati; ogni tavolo espone il proprio QR menu |
+| QR tavolo | Identificato da token casuale; non dal solo numero del tavolo |
 | Catalogo | Unica fonte dati per menu QR e cassa |
 | Prodotto | Nome, categoria, prezzo, disponibilità e allergeni |
 | Allergeni | Visibili nel menu QR prima dell'invio della comanda |
 | Stati comanda | `Da gestire` → `Consegnata` → `In pagamento` → `Pagata` |
+| Servizio web | Conserva sempre le comande e riceve gli stati sintetici dall'applicativo |
+| Applicativo locale | Gestisce operatività, POS, dati fiscali, documenti e chiusure |
+| Cliente | Dopo l'invio della comanda vede solo la conferma; non segue gli stati successivi |
+| Carrello | Si svuota dopo l'invio positivo della comanda, preceduto da conferma esplicita |
+| Comande per tavolo | Più comande attive indipendenti; la cassa può unirle per il pagamento |
 | Pagamento | Avviato dalla cassiera; conto unico o separato guidato |
 | POS | La cassa invia l'importo da incassare e riceve l'esito del pagamento |
 | Loyalty | Fuori dal primo MVP; tornerà dopo la validazione del flusso di cassa |
@@ -31,8 +37,7 @@
 4. Quale POS preciso integrare per primo e con quale protocollo di scambio importo/esito?
 5. Quale modello RCH preciso supportare per primo?
 6. Quale ambiente usare in cassa: tablet Android, tablet iPad, PC Windows o web app locale?
-7. Come gestire comande e pagamenti se Internet non è disponibile?
-8. Come ottenere dispositivi reali, documentazione e supporto tecnico per i test?
+7. Come ottenere dispositivi reali, documentazione e supporto tecnico per i test?
 
 ## Rischi da validare presto
 

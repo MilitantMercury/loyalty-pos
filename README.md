@@ -12,6 +12,8 @@ Siamo nella fase di definizione del prodotto. Non è ancora stato scelto lo stac
 
 Il cliente compone la comanda dal QR del tavolo; la cassa la riceve, la gestisce e, al pagamento, invia l'importo alla stampante fiscale e al POS. Solo dopo la conferma del documento fiscale la comanda risulta pagata e passa nello storico.
 
+Il servizio web gestisce menu QR e comande; l'applicativo installato nel locale gestisce cassa, POS, documenti fiscali e chiusure.
+
 ## Documentazione
 
 - [Visione e perimetro MVP](docs/01-visione-e-mvp.md)
