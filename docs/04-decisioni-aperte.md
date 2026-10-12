@@ -9,10 +9,10 @@
 | Flusso iniziale | Comanda dal QR del tavolo, gestione e pagamento alla cassa |
 | Tavoli | Numerati; ogni tavolo espone il proprio QR menu |
 | QR tavolo | Identificato da token casuale; non dal solo numero del tavolo |
-| Catalogo | Unica fonte dati per menu QR e cassa |
+| Catalogo | Gestito nell'applicativo locale e pubblicato al servizio; unica fonte logica per menu QR e cassa |
 | Prodotto | Nome, categoria, prezzo, disponibilità e allergeni |
 | Allergeni | Visibili nel menu QR prima dell'invio della comanda |
-| Stati comanda | `Da gestire` → `Consegnata` → `In pagamento` → `Pagata` |
+| Stati comanda | `Da gestire` → `Consegnata` → `Pagata`; eccezione `Da verificare` |
 | Servizio web | Conserva sempre le comande e riceve gli stati sintetici dall'applicativo |
 | Applicativo locale | Gestisce operatività, POS, dati fiscali, documenti e chiusure |
 | Cliente | Dopo l'invio della comanda vede solo la conferma; non segue gli stati successivi |
@@ -20,6 +20,9 @@
 | Comande per tavolo | Più comande attive indipendenti; la cassa può unirle per il pagamento |
 | Pagamento | Avviato dalla cassiera; conto unico o separato guidato |
 | POS | La cassa invia l'importo da incassare e riceve l'esito del pagamento |
+| Log POS | Solo journal append-only locale su file; nessun dettaglio tecnico POS nel database |
+| Vendite e documenti | Un'unica entità `sales`; `document_type` distingue vendita e annullamento |
+| Unità locale | L'entità del locale è `local_units` |
 | Loyalty | Fuori dal primo MVP; tornerà dopo la validazione del flusso di cassa |
 | Hardware | Usare la stampante fiscale esistente del locale |
 | Prime famiglie | Epson FP-81II RT e RCH |
