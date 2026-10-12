@@ -18,6 +18,7 @@ La cassiera batte normalmente l'ordine nella nostra cassa; dopo che la stampante
 - [Flussi operativi di cassa](docs/02-flussi-cassa.md)
 - [Integrazioni fiscali e hardware](docs/03-integrazioni-hardware.md)
 - [Decisioni e questioni aperte](docs/04-decisioni-aperte.md)
+- [Flusso di collaborazione](docs/05-flusso-collaborazione.md)
 
 ## Principi
 
