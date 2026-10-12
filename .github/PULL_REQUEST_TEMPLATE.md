@@ -11,6 +11,6 @@
 - [ ] La PR tratta un solo obiettivo.
 - [ ] Ho aggiornato la documentazione quando necessario.
 - [ ] Ho aggiunto o aggiornato i test, oppure ho spiegato perché non sono applicabili.
-- [ ] Ho considerato l'impatto su vendita, fiscalizzazione e punti loyalty.
+- [ ] Ho considerato l'impatto su menu, comande, pagamento e fiscalizzazione.
 - [ ] Ho richiesto una revisione.
 

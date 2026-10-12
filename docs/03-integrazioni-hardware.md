@@ -27,18 +27,18 @@ RCH è una famiglia di prodotti, non un unico protocollo da assumere compatibile
 ## Architettura desiderata
 
 ```text
-Interfaccia cassa
-       |
-Motore comande e vendite
-       |
-Adapter fiscale (contratto comune)
-       |------------------|
-Adapter Epson       Adapter RCH
-       |                  |
-Stampante/RT Epson  Stampante/RT RCH
+QR menu → piattaforma comande → interfaccia cassa
+                                   |
+                           Motore comande e vendite
+                              |                 |
+                      Adapter POS         Adapter fiscale
+                              |            |------------------|
+                             POS       Adapter Epson       Adapter RCH
+                                             |                  |
+                                    Stampante/RT Epson  Stampante/RT RCH
 ```
 
-Ogni adapter deve esporre almeno: verifica disponibilità, emissione vendita, lettura esito, annullamento, richiesta di chiusura Z, lettura dei riferimenti della chiusura e diagnostica. L'applicazione non deve contenere logica dipendente da una singola marca.
+L'adapter POS deve almeno inviare l'importo da incassare, attendere l'esito e restituire un riferimento della transazione quando disponibile. L'adapter fiscale deve esporre almeno: verifica disponibilità, emissione vendita, lettura esito, annullamento, richiesta di chiusura Z, lettura dei riferimenti della chiusura e diagnostica. L'applicazione non deve contenere logica dipendente da una singola marca o da uno specifico POS.
 
 L'esito di una vendita fiscalizzata deve includere, ove restituiti dal dispositivo: numero documento, importo, data/ora, matricola della stampante e numero Z. Questi dati collegano l'archivio operativo alla fonte fiscale.
 

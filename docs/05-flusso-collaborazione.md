@@ -33,8 +33,9 @@ Squash merge su main
 | --- | --- |
 | `product` | Scelte di prodotto e priorità |
 | `ux-cassa` | Velocità, semplicità e interfaccia della cassa |
+| `menu-comande` | QR menu, catalogo, tavoli e ciclo della comanda |
 | `fiscale-hardware` | Stampanti fiscali, RT e integrazioni hardware |
-| `loyalty` | Clienti, punti e premi |
+| `loyalty` | Clienti, punti e premi: area successiva al primo MVP |
 | `bug` | Comportamento non corretto |
 | `technical-debt` | Miglioramenti tecnici non urgenti |
 | `decision-needed` | Scelta che richiede confronto prima dello sviluppo |

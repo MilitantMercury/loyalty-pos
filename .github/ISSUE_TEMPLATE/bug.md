@@ -16,5 +16,5 @@ labels: bug
 
 ## Impatto
 
-<!-- Ad esempio: blocca la cassa, rischio di doppio accredito punti, problema visivo. -->
+<!-- Ad esempio: blocca la cassa, rischio di doppio incasso o problema visivo. -->
 
