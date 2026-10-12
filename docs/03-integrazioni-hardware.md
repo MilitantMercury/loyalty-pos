@@ -2,7 +2,7 @@
 
 ## Principio
 
-La nostra applicazione gestisce l'esperienza di vendita e la loyalty. La stampante fiscale o il registratore telematico esistente nel locale mantiene il ruolo fiscale: emissione del documento commerciale e trasmissione dei corrispettivi secondo la propria configurazione.
+La nostra applicazione gestisce menu QR, comande, vendita e pagamento. La stampante fiscale o il registratore telematico esistente nel locale mantiene il ruolo fiscale: emissione del documento commerciale e trasmissione dei corrispettivi secondo la propria configurazione.
 
 Non chiediamo al locale di acquistare una nuova stampante fiscale.
 
@@ -29,7 +29,7 @@ RCH è una famiglia di prodotti, non un unico protocollo da assumere compatibile
 ```text
 Interfaccia cassa
        |
-Motore vendite e loyalty
+Motore comande e vendite
        |
 Adapter fiscale (contratto comune)
        |------------------|
