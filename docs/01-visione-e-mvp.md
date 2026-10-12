@@ -18,7 +18,8 @@ Una cassa software per bar e piccoli locali. Il cliente usa il QR del tavolo per
 ## Perimetro della prima versione
 
 - Tavoli numerati e un QR menu collegato a ciascun tavolo.
-- Catalogo essenziale di prodotti e prezzi.
+- Catalogo unico, usato sia dalla cassa sia dal QR menu.
+- Gestione di categorie, prodotti, prezzi e allergeni.
 - Creazione autonoma della comanda dal QR e invio in tempo reale alla cassa.
 - Lista `Da gestire` in cassa per le nuove comande.
 - Stato `Consegnata` per le comande portate al tavolo e ancora da pagare.
@@ -40,6 +41,20 @@ Una cassa software per bar e piccoli locali. Il cliente usa il QR del tavolo per
 - Loyalty, premi e identificazione cliente.
 - Pagamenti gestiti direttamente dalla piattaforma: nella prima versione integriamo il flusso con il POS esistente.
 - Compatibilità universale con ogni modello di stampante fiscale.
+
+## Catalogo e menu
+
+Il menu QR e la cassa leggono lo stesso catalogo: un prezzo o un prodotto non può essere aggiornato separatamente nei due canali.
+
+Per il primo MVP, ogni prodotto deve avere almeno:
+
+- nome;
+- categoria;
+- prezzo;
+- disponibilità nel menu;
+- elenco degli allergeni applicabili.
+
+La categoria stabilisce l'ordine con cui i prodotti appaiono nel menu e nella cassa. Gli allergeni sono informazione del prodotto e devono essere visibili al cliente prima dell'invio della comanda.
 
 ## Misura del successo
 

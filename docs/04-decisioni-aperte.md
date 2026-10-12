@@ -8,6 +8,9 @@
 | Priorità | Praticità, velocità, semplicità |
 | Flusso iniziale | Comanda dal QR del tavolo, gestione e pagamento alla cassa |
 | Tavoli | Numerati; ogni tavolo espone il proprio QR menu |
+| Catalogo | Unica fonte dati per menu QR e cassa |
+| Prodotto | Nome, categoria, prezzo, disponibilità e allergeni |
+| Allergeni | Visibili nel menu QR prima dell'invio della comanda |
 | Stati comanda | `Da gestire` → `Consegnata` → `In pagamento` → `Pagata` |
 | Pagamento | Avviato dalla cassiera; conto unico o separato guidato |
 | POS | La cassa invia l'importo da incassare e riceve l'esito del pagamento |
